@@ -74,10 +74,8 @@ func main() {
 	_, err = uploader.Upload(upParams)
 
 	if err != nil {
-		die("Unable to upload %q to %q, %v", "test", bucketName, err)
+		die("Unable to upload %q to %q, %v", keyName, bucketName, err)
 	}
-
-	fmt.Printf("Successfully uploaded")
 }
 
 func die(msg string, args ...interface{}) {
